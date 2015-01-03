@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ $# -ne 3 ]]; then
+if [[ $# -eq 0 ]]; then
   echo "Usage: $0 </path/to/sql_file.sql>"
   exit 1
 fi
