@@ -73,11 +73,7 @@ if [ "$1" = 'mysqld' ]; then
 			echo "CREATE USER '"$MYSQL_USER"'@'%' IDENTIFIED BY '"$MYSQL_PASSWORD"' ;" | "${mysql[@]}"
 
 			if [ "$MYSQL_DATABASE" ]; then
-				echo "GRANT ALL ON \`"$MYSQL_DATABASE"\`.* TO '"$MYSQL_USER"'@'%' ;" | "${mysql[@]}"
-			fi
-
-			if [ "$MYSQL_DATABASE2" ]; then
-				echo "GRANT ALL ON \`"$MYSQL_DATABASE2"\`.* TO '"$MYSQL_USER"'@'%' ;" | "${mysql[@]}"
+				echo "GRANT ALL PRIVILEGES ON *.* TO '"$MYSQL_USER"'@'%' ;" | "${mysql[@]}"
 			fi
 
 			echo 'FLUSH PRIVILEGES ;' | "${mysql[@]}"
