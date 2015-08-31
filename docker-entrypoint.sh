@@ -67,7 +67,6 @@ if [ "$1" = 'mysqld' ]; then
 
 		if [ "$MYSQL_DATABASE2" ]; then
 			echo "CREATE DATABASE IF NOT EXISTS \`$MYSQL_DATABASE2\` ;" | "${mysql[@]}"
-			mysql+=( "$MYSQL_DATABASE2" )
 		fi
 
 		if [ "$MYSQL_USER" -a "$MYSQL_PASSWORD" ]; then
