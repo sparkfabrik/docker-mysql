@@ -74,6 +74,7 @@ if [ "$1" = 'mysqld' ]; then
 
 			if [ "$MYSQL_DATABASE" ]; then
 				echo "GRANT ALL PRIVILEGES ON *.* TO '"$MYSQL_USER"'@'%' ;" | "${mysql[@]}"
+				echo "GRANT ALL ON \`"$MYSQL_DATABASE"\`.* TO '"$MYSQL_USER"'@'%' ;" | "${mysql[@]}"
 			fi
 
 			echo 'FLUSH PRIVILEGES ;' | "${mysql[@]}"
