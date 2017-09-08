@@ -1,5 +1,5 @@
 
-##Docker Drupal Mysql
+## Docker Drupal Mysql
 
 Derivated from mysql 5.6
 
@@ -13,7 +13,7 @@ Mysql: 5.6
 The server is automatically configured using a set of default and optimized configurations, which resides on /etc/mysql/conf.d/.
 
 
-File: custom.cnf
+File: `custom.cnf`
 
 ```
 max_allowed_packet = 512M
@@ -33,7 +33,7 @@ join_buffer_size = 4M
 thread_cache_size = 4
 ```
 
-innodb.cnf
+`innodb.cnf`
 
 ```
 innodb_buffer_pool_size = 1024M
